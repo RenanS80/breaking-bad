@@ -7,7 +7,6 @@
 
 body{
   background-color: #454444;
-
   height: 100vh;
   font-family: Helvetica, sans-serif;
 
@@ -24,16 +23,21 @@ header {
   align-items: center;
 }
 
-header .logo {
+header a .logo {
   margin-left: 40px;
   width: 170px;
   height: 37px;
 }
 
-header .icon {
+header a svg {
   margin-right: 40px;
   width: 30px;
   height: 30px;
+  transition: 0.6s fill;
+}
+
+header a svg:hover{
+  fill: #7f8187;
 }
 
 
@@ -56,6 +60,7 @@ h1{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  padding-top:
 }
 
 .card {
