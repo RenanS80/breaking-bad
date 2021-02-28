@@ -1,38 +1,97 @@
-.App {
+/* ------ GERAL ------ */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #454444;
+
+  height: 100vh;
+  font-family: Helvetica, sans-serif;
+
+}
+
+
+
+/* ------ BARRA DE NAVEGAÇÃO ------ */
+header {
+  height: 80px;
+  background-color: #2b2a2a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  margin-left: 40px;
+  width: 170px;
+  height: 37px;
+}
+
+header .icon {
+  margin-right: 40px;
+  width: 30px;
+  height: 30px;
+}
+
+
+
+/* ------ CONTEÚDO ------ */
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1{
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 50px;
+  color: #cdcdd5;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  background-color: #cdd0d9;
+  height: 450px;
+  border-radius: 10px;
+  margin-top: 20px;
+  color: #000;
+  border: 1px solid #cdd0d9;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
+}
+
+.card h2{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card ul {
+  list-style: none;
+  color: #333;
+  padding-top: 20px;
+  padding-left: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+
+/* ------ MEDIA QUERY ------ */
+@media (max-width: 800px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
